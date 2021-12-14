@@ -9,5 +9,5 @@ public static int dayOne(String file) throws IOException {
             int second = numbers.get(i+1);
             if(second > first) increasing++;
         }
-        return increasing;
+        return increasing; 
     }
