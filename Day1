@@ -1,0 +1,13 @@
+public static int dayOne(String file) throws IOException {
+        BufferedReader bf = new BufferedReader(new FileReader(file));
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < 2000; i++)
+            numbers.add( Integer.parseInt( bf.readLine() ) );
+        int increasing = 0;
+        for (int i = 0; i < 1999; i++){
+            int first = numbers.get(i);
+            int second = numbers.get(i+1);
+            if(second > first) increasing++;
+        }
+        return increasing;
+    }
